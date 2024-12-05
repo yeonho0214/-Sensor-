@@ -1,5 +1,75 @@
 3-1_arduino_code_실습
 ====================
+## 0. 준비 단계
+### 0.1. Jetson nano에 파이썬 3.8 설치하기
+
+> 1.update & upgrade
+    sudo apt update
+    sudo apt upgrade
+> 2. 필요한 패키지 설치
+    sudo apt install build-essential libssl-dev zlib1g-dev libncurses5-dev libncursesw5-dev libreadline-dev 
+    libsqlite3-dev libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev libffi-dev libc6-dev
+> 3. python3.8 소스코드 받기
+    cd /
+    sudo wget https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tar.xz
+
+> 4. 압축 풀기
+    sudo tar -xf Python-3.8.12.tar.xz
+    cd Python-3.8.12
+
+> 5. Build
+    ./configure --enable-optimizations
+    make -j4
+
+> 6. 마무리
+    sudo make altinstall
+    python3.8 --version
+
+> 7. 가상환경 (중요!!)
+    python3.8 -m venv myenv                                     
+    source myenv/bin/activate
+
+    pip install —trusted-host pypi.org —trusted-host
+    files.pythonhosted.org pip setuptools
+
+### 0.2. Jetson nano에 jupyter notebook 설치하기
+
+*앞으로 python3.8 사용할때는 아래 코드를 사용해서 가상환경으로 들어간다. 가상환경 이름: myenv
+
+    source myenv/bin/activate
+
+*jupyter notebook 설치
+
+    pip install jupyter
+
+    pip install openai
+
+    Pip install gradio
+
+*jupyter notebook 실행
+
+    jupyter notebook
+
+### 0.3. Jetson GPIO
+1. 가상환경에서 Jetson.GPIO 깔려있는지 확인 -> 숫자가 나와야함 -> 깔려있다면 다음 단계 안해도 됨
+    source myenv/bin/activate
+    python3 -c "import Jetson.GPIO as GPIO; print(GPIO.VERSION)"
+    Deactivate
+
+2. 가상환경 비활성화하고 아래 코드 실행해서 깔려있는지 확인 -> 깔려있다면 다음단계 X
+    python3 -c "import Jetson.GPIO as GPIO; print(GPIO.VERSION)"
+
+3. 가상환경 비활성화에서도 안깔려있으면 코드 실행 / 깔려있으면 실행 안해도 됨
+    sudo apt-get update
+    sudo apt-get install python3-jetson-gpio
+
+4. 가상환경에서만 안되는거면? 아래 코드 실행 -> 다시 1번단계 실행해보기
+    cp -r /usr/lib/python3/dist-packages/Jetson /home/dli/myenv/lib/python3.8/site-packages/
+    cp -r /usr/lib/python3/dist-packages/Jetson.GPIO-2.0.17.egg-info /home/dli/myenv/lib/python3.8/site-packages/
+
+### 0.4. 아두이노
+
+
 
 ## 1. 미세먼지 읽어오는 코드
 

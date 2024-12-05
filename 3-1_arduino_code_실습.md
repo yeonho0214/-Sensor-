@@ -153,7 +153,7 @@ cp -r /usr/lib/python3/dist-packages/Jetson.GPIO-2.0.17.egg-info /home/dli/myenv
     newgrp dialout
 >
     arduino
-<img src="https://github.com/user-attachments/assets/40500c61-2513-48a5-a653-2d17640da353" width="80%" />
+<img src="https://github.com/user-attachments/assets/40500c61-2513-48a5-a653-2d17640da353" width="50%" />
 
 
 ## 1. 미세먼지 읽어오는 코드

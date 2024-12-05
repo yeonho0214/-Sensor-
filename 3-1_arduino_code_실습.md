@@ -122,7 +122,20 @@ cp -r /usr/lib/python3/dist-packages/Jetson.GPIO-2.0.17.egg-info /home/dli/myenv
 </code>
 </pre>
 ### 0.4. 아두이노
-
+* 기존 아두이노 삭제
+    sudo apt remove —purge arduino
+    sudo apt autoremove
+* 1.8.19 버전으로 다운로드: <https://www.arduino.cc/en/software>
+* arduino-1.8.19라는 폴더에 압축해제
+    cd Downloads
+    tar -xf arduino-1.8.19-linuxaarch64.tar.xz
+>
+    cd arduino-1.8.19
+    sudo ./install.sh
+    sudo usermod -aG dialout $USER
+    newgrp dialout
+>
+    arduino
 
 
 ## 1. 미세먼지 읽어오는 코드

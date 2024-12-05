@@ -99,7 +99,9 @@ Pip install gradio
 jupyter notebook
 </code>
 </pre>
-<img src="https://github.com/user-attachments/assets/d89fa0a0-ced6-4e61-a3da-5741a4b737d5" width="80%" />
+<img src="https://github.com/user-attachments/assets/3fdc497f-537b-4982-8255-538bbfee75af" width="70%" />
+
+
 
 ### 0.3. Jetson GPIO
 1. 가상환경에서 Jetson.GPIO 깔려있는지 확인 -> 숫자가 나와야함 -> 깔려있다면 다음 단계 안해도 됨

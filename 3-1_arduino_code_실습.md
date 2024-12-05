@@ -127,6 +127,7 @@ cp -r /usr/lib/python3/dist-packages/Jetson.GPIO-2.0.17.egg-info /home/dli/myenv
     sudo apt autoremove
 * 1.8.19 버전으로 다운로드: <https://www.arduino.cc/en/software>
 * arduino-1.8.19라는 폴더에 압축해제
+>
     cd Downloads
     tar -xf arduino-1.8.19-linuxaarch64.tar.xz
 >

@@ -184,3 +184,5 @@ with gr.Blocks() as demo:
 demo.launch(share=True, debug=True)
 </code>
 </pre>
+***
+<img src="https://github.com/user-attachments/assets/f4eaa4fa-f9e3-493c-993e-2373d5221776" width="80%" />

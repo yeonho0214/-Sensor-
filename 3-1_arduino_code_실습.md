@@ -64,7 +64,7 @@ files.pythonhosted.org pip setuptools
 <img src="https://github.com/user-attachments/assets/26b1c21e-20ae-406d-9a08-69a20982fff6" width="30%" />
 <img src="https://github.com/user-attachments/assets/46911449-f62a-4a53-912b-a141c13b0f5b" width="30%" />
 
-
+***
 
 ### 0.2. Jetson nano에 jupyter notebook 설치하기
 
@@ -101,7 +101,7 @@ jupyter notebook
 </pre>
 <img src="https://github.com/user-attachments/assets/3fdc497f-537b-4982-8255-538bbfee75af" width="70%" />
 
-
+***
 
 ### 0.3. Jetson GPIO
 1. 가상환경에서 Jetson.GPIO 깔려있는지 확인 -> 숫자가 나와야함 -> 깔려있다면 다음 단계 안해도 됨
@@ -135,6 +135,8 @@ cp -r /usr/lib/python3/dist-packages/Jetson.GPIO-2.0.17.egg-info /home/dli/myenv
 <img src="https://github.com/user-attachments/assets/9d17d306-dffd-4aa1-b8c3-772a1507a7c3" width="40%" />
 <img src="https://github.com/user-attachments/assets/39e0722c-212d-4479-bc49-b97ddfd1575e" width="40%" />
 
+***
+
 ### 0.4. 아두이노
 * 기존 아두이노 삭제
 >
@@ -155,7 +157,7 @@ cp -r /usr/lib/python3/dist-packages/Jetson.GPIO-2.0.17.egg-info /home/dli/myenv
     arduino
 <img src="https://github.com/user-attachments/assets/40500c61-2513-48a5-a653-2d17640da353" width="50%" />
 
-
+***
 ## 1. 미세먼지 읽어오는 코드
 
     import Jetson.GPIO as GPIO

@@ -3,42 +3,42 @@
 ## 0. 준비 단계
 ### 0.1. Jetson nano에 파이썬 3.8 설치하기
 
-> 1.update & upgrade
+1.update & upgrade
     sudo apt update
     sudo apt upgrade
-> 2. 필요한 패키지 설치
+2. 필요한 패키지 설치
     sudo apt install build-essential libssl-dev zlib1g-dev libncurses5-dev libncursesw5-dev libreadline-dev 
     libsqlite3-dev libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev libffi-dev libc6-dev
-> 3. python3.8 소스코드 받기
+3. python3.8 소스코드 받기
     cd /
     sudo wget https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tar.xz
 
-> 4. 압축 풀기
+4. 압축 풀기
     sudo tar -xf Python-3.8.12.tar.xz
     cd Python-3.8.12
 
-> 5. Build
+5. Build
     ./configure --enable-optimizations
     make -j4
 
-> 6. 마무리
+6. 마무리
     sudo make altinstall
     python3.8 --version
 
-> 7. 가상환경 (중요!!)
+7. 가상환경 (중요!!)
     python3.8 -m venv myenv                                     
     source myenv/bin/activate
-
+>
     pip install —trusted-host pypi.org —trusted-host
     files.pythonhosted.org pip setuptools
 
 ### 0.2. Jetson nano에 jupyter notebook 설치하기
 
-*앞으로 python3.8 사용할때는 아래 코드를 사용해서 가상환경으로 들어간다. 가상환경 이름: myenv
+* 앞으로 python3.8 사용할때는 아래 코드를 사용해서 가상환경으로 들어간다. 가상환경 이름: myenv
 
     source myenv/bin/activate
 
-*jupyter notebook 설치
+* jupyter notebook 설치
 
     pip install jupyter
 
@@ -46,7 +46,7 @@
 
     Pip install gradio
 
-*jupyter notebook 실행
+* jupyter notebook 실행
 
     jupyter notebook
 
